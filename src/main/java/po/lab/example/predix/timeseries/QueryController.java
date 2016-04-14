@@ -1,6 +1,7 @@
 package po.lab.example.predix.timeseries;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -20,7 +21,8 @@ public class QueryController {
     private String queryUrlPrefix;
 
     @Autowired
-    RestTemplate restTemplate;
+    @Qualifier("restTemplate")
+    private RestTemplate restTemplate;
 
     @RequestMapping("/ping")
     public String ping(){
