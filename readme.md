@@ -2,7 +2,8 @@ Before running this example predix services should be set up.
 
 Example of services setup below is described for windows based dev environment with cf and uaa cli installed. The only windows specific command is `findstr`, which is analog to unix command `grep`.
 
-Services setup example:
+#####Services setup example:
+
 1. Log into cloud foundry
     * `cf login`
 1. Create UAA instance if you have not yet:
